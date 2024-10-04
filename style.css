@@ -13,9 +13,6 @@ body {
   flex-direction: column;
 }
 
-img{
-    background-color: rgb(233, 131, 131);
-}
 p {
   background-color: rgb(209, 206, 206);
   border-radius: 5px;

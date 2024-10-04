@@ -5,11 +5,11 @@ async function getDapi() {
     console.log(data)
   
     const element = document.querySelector(".dapi");
-  
     for (const item of data.content) {
       const id = item.id;
       const name = item.name;
       const image = item.image;
+      const href = item.href;
       element.innerHTML += "<p>" + id + ": " + name + "</p>"
       element.innerHTML += '<img src="' + image + '">';
 ;
