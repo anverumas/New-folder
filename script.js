@@ -1,18 +1,10 @@
-async function getDapi() {
-    const url = "https://digi-api.com/api/v1/digimon";
-    const response = await fetch(url);
-    const data = await response.json();
-    console.log(data)
-  
-    const element = document.querySelector(".dapi");
-    for (const item of data.content) {
-      const id = item.id;
-      const name = item.name;
-      const image = item.image;
-      const href = item.href;
-      element.innerHTML += "<p>" + id + ": " + name + "</p>"
-      element.innerHTML += '<img src="' + image + '">';
-;
-    }
+const element = document.querySelector("input");
+element.addEventListener("keydown", function (event) {
+  console.log(`Key pressed: ${event.key}`);
+  console.log(`User input: ${event.target.value}`);
+  if (event.key === "Enter") {
+    const info = element.value
+    element.innerHTML += "<p>" + element.value + "</p>";
+    element.value = ''
   }
-getDapi();
+});
